@@ -1,4 +1,5 @@
 import 'package:baki_app/Pages/Login_page.dart';
+import 'package:baki_app/utils/Routes.dart';
 import 'package:flutter/material.dart';
 import 'Pages/Home_page.dart';
 
@@ -19,11 +20,11 @@ import 'Pages/Home_page.dart';
           darkTheme: ThemeData(
             brightness: Brightness.dark,
           ),
-          initialRoute: "/",
+          initialRoute: Myroutes.loginroute,
           routes: {
-            "/" : (context) => Loginpage(),
-            "/home" : (context) => Homepage(),
-            "/login" : (context) => Loginpage()
+            Myroutes.loginroute: (context) => Loginpage(),
+            Myroutes.homeroute: (context) => Homepage(),
+
           },
         );
       }
