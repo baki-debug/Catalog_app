@@ -1,5 +1,6 @@
 import 'package:baki_app/Pages/Login_page.dart';
 import 'package:baki_app/utils/Routes.dart';
+import 'package:baki_app/widgets/themes.dart';
 import 'package:flutter/material.dart';
 import 'Pages/Home_page.dart';
 
@@ -13,14 +14,10 @@ import 'Pages/Home_page.dart';
         return MaterialApp(
           // home: Homepage(),
           themeMode: ThemeMode.light,
-          theme: ThemeData(
-              primarySwatch: Colors.deepPurple,
-              // primaryTextTheme: GoogleFonts.latoTextTheme()
-            ),
-          darkTheme: ThemeData(
-            brightness: Brightness.dark,
-          ),
-          initialRoute: Myroutes.loginroute,
+          theme: MyTheme.lightTheme(context),
+          darkTheme: MyTheme.darkTheme(context),
+
+          initialRoute: Myroutes.homeroute,
           routes: {
             Myroutes.loginroute: (context) => Loginpage(),
             Myroutes.homeroute: (context) => Homepage(),
