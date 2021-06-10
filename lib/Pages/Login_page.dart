@@ -1,5 +1,6 @@
 import 'package:baki_app/utils/Routes.dart';
 import 'package:flutter/material.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class Loginpage extends StatefulWidget {
   @override
@@ -26,13 +27,12 @@ class _LoginpageState extends State<Loginpage> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
-
+      color: context.canvasColor,
        child: Form(
        key: _formkey,
          child: Column(
              children: [
-             Image.asset("assets/images/undraw_social_friends_nsbv.png",
+             Image.asset("assets/images/hey.png",
              fit: BoxFit.cover,),
                SizedBox(height: 20.0,),
            Text(
@@ -82,7 +82,7 @@ class _LoginpageState extends State<Loginpage> {
                        ),
                        SizedBox(height: 40.0,),
                        Material(
-                         color: Colors.deepPurple,
+                         color: context.theme.buttonColor,
                          borderRadius: BorderRadius.circular(changeButton?50:8),
 
                          child: InkWell(

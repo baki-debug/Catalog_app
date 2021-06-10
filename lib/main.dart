@@ -1,3 +1,4 @@
+import 'package:baki_app/Pages/CartPage.dart';
 import 'package:baki_app/Pages/Login_page.dart';
 import 'package:baki_app/utils/Routes.dart';
 import 'package:baki_app/widgets/themes.dart';
@@ -13,7 +14,7 @@ import 'Pages/Home_page.dart';
       Widget build(BuildContext context) {
         return MaterialApp(
           // home: Homepage(),
-          themeMode: ThemeMode.light,
+          themeMode: ThemeMode.system,
           theme: MyTheme.lightTheme(context),
           darkTheme: MyTheme.darkTheme(context),
 
@@ -21,6 +22,7 @@ import 'Pages/Home_page.dart';
           routes: {
             Myroutes.loginroute: (context) => Loginpage(),
             Myroutes.homeroute: (context) => Homepage(),
+            Myroutes.cartRoute: (context) => CartPage(),
 
           },
         );

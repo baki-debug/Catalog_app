@@ -24,6 +24,9 @@ class MyDrawer extends StatelessWidget {
         )
             ),
             ListTile(
+              onTap: (){
+                Navigator.pushNamed(context, Myroutes.homeroute);
+              },
               leading: Icon(
                 CupertinoIcons.home,
                 color: Colors.white,

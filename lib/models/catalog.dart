@@ -1,16 +1,12 @@
 
 
 class CatalogModel{
-  static final items = [
-    Item(
-      id: 1,
-      name: "iPhone 12 Pro",
-      desc: "Apple iPhone 12th generation",
-      price: 999,
-      color: "#33505a",
-      image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fapplekid.pk%2Fwp-content%2Fuploads%2F2020%2F10%2Fapple-iphone-12-mini-64gb-dual-sim-black_5.jpg&f=1&nofb=1"
-    )
-  ];
+  static List<Item> items;
+
+  // static Item getById(int id) =>
+  //     items.firstWhere((element) => element.id = id, orElse: null);
+  //
+  // static Item getByPosition(int pos) => items[pos];
 }
 
 class Item{
@@ -22,4 +18,23 @@ class Item{
   final String image;
 
   Item({this.id, this.name, this.desc, this.price, this.color, this.image});
+
+factory Item.fromMap(Map<String,dynamic> map){
+return Item(
+  id: map["id"],
+    name: map["name"],
+    desc: map["desc"],
+    price: map["price"],
+    color: map["color"],
+    image: map["image"],
+);
+}
+ toMap()=> {
+   "id": id,
+   "name":name,
+   "desc":desc,
+   "price":price,
+   "color":color,
+   "image":image,
+ };
 }
