@@ -1,9 +1,8 @@
-# baki_app
+# catalog_app
 
-A new Flutter application.
+A Flutter application which lists items that can be added in the cart. The app is proficiently written and contains dark and light themes, it is a very good entry level for flutter.
 
 ## Getting Started
-
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
